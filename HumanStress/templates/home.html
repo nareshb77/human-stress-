@@ -1,0 +1,114 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css" integrity="sha512-RntatPOhEcQEA81gC/esYoCkGkL7AYV7TeTPoU+R9zE44/yWxVvLIBfBSaMu78rhoDd73ZeRHXRJN5+aPEK53Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <title>Spense</title>
+</head>
+<body>
+    <div>
+    <nav class="navbar bg-black p-4">
+        <p class="text-gray-300 text-center">🎉To celebrate Spense's launch,we will be waiving all fees for the entire month of April<span class="underline"> You will be recieving 100% of the earnings</span> 🎉</p>
+    </nav>
+    <div class="spense-top font-mono p-2" >
+        <div class="flex justify-around">
+            <span class=" mt-12  font-extrabold">spense.</span>
+            <div class="mt-12 ">
+                <span class="mx-2">Business</span>
+                <span class="mx-2">Pricing</span>
+                <span class="mx-2">Features</span>
+            </div>
+            <div class="mt-6">
+                <a href="login" type="click" class="">Login</a>
+                <a href="register" class="bg-black p-6 text-white ml-4 rounded-lg" type="click">Get Started</a>
+            </div>
+        </div>
+        <div class="spense-info flex flex-row-reverse pb-8">
+            <div class="max-w-2xl ml-40 mt-24">
+                <h1 class="text-6xl font-sans">Share your unfiltered thoughts.Get paid.</h1>
+                <p class="mt-6">spense is an open platform for individuals to share their unfiltered thoughts.Discover the topics you love,and get paid for doing just that.</p>
+                <div class="flex mt-8 mb-4">
+                    <img src="{% static 'Checkmark.svg' %}" alt="" srcset="">
+                    <span class="ml-2">Recieve 99% of the earings.</span>
+                </div>
+                <div class="flex mb-4">
+                    <img src="{% static 'Checkmark.svg' %}" alt="" srcset="">
+                    <span class="ml-2">Get paid via Debit Cards,ACH or Paypal.</span>
+                </div>
+                <div class="flex mb-4">
+                    <img src="{% static 'Checkmark.svg' %}" alt="" srcset="">
+                    <span class="ml-2">Withdraw  your earings anytime.</span>
+                </div>
+                <div class="mt-12">
+                    <input type="click" placeholder="john@example.com" class="py-6 px-4 text-center rounded-lg border border-black">
+                    <button class="bg-black p-6 text-white ml-4 rounded-lg" type="click">Get Started</button>
+                </div>
+            </div>
+            <div class="max-w-md mt-12 ml-12" data-aos="flip-left" data-aos-duration="2000" data-aos-delay="5000">
+                <img src="{% static 'Hero Image.png' %}" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+    <div class="flex h-6 ml-36 my-8 justify-between mr-40 ">
+        <img src="{% static 'Facebook Logo.png' %}" alt="" srcset="" class="">
+        <img src="{% static 'Dribbble Logo.png' %}" alt="" srcset="" class="">
+        <img src="{% static 'Youtube Logo.png' %}" alt="" srcset="" class="">
+        <img src="{% static 'Pinterest Logo.png' %}" alt="" srcset="" class="">
+        <img src="{% static 'Twitter Logo.png' %}" alt="" srcset="" class="">
+        <img src="{% static 'Reddit Logo.png' %}" alt="" srcset="" class="">
+        <img src="{% static 'Google Logo.png' %}" alt="" srcset="" class="">
+        <img src="{% static 'Slack Logo.png' %}" alt="" srcset="">
+    </div>
+    <div class="ml-36 my-8 mr-40 flex mbl-bg" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="5000" data-aos-easing="linear">
+        <div class="mt-6 w-100 max-w-md">
+            <h1 class="text-5xl font-sans mb-6">Secure your money with Escrow</h1>
+            <p class="mb-8 text-lg">Spense uses Escrow to secure all payments.We believe Escrow offers the highest level of security for payments,so you never need to worry about scams.</p>
+            <span class="text-2xl underline font-semibold">Learn more about Escrow -></span>
+        </div>
+    </div>
+    <div class="ml-36 my-8 mr-40 flex  rounded-3xl">
+        <div class="max-w-3xl" data-aos="zoom-out-right" data-aos-duration="2000" data-aos-delay="5000">
+            <img src="{% static 'Text Editor.png'%}" alt="" srcset="">
+        </div>
+        <div class="mt-36">
+            <h1 class="font-sans text-4xl font-bold">A text editor like no other.</h1>
+            <p class="mt-4 mb-2">Our text editor pulls you into focus mode with its simplistic design and usuability so you can put out your best writtings</p>
+            <span class="text-2xl underline font-semibold">Text editor Live Demo -></span>
+        </div>
+    </div>
+    <footer class="bg-black text-gray-300 flex flex-row  justify-between pr-36 pb-12">
+        <div class="max-w-sm ml-40 mt-8 ">
+            <span class="font-extrabold">spense.</span>
+            <p class="mt-4">spense is an open platform for individuals to share their unfiltered thoughts.Discover the topics you love,and get paid for doing just that.</p>
+        </div>
+        <div class="mt-8  flex flex-col">
+            <span class="font-extrabold">Sitemap</span>
+            <span class="mt-4">Home page</span>
+        </div>
+        <div class="mt-8  flex flex-col">
+            <span class="font-extrabold">Resources</span>
+            <span class="mt-4">Support</span>
+            <span class="mt-2">Contact</span>
+            <span class="mt-2">FAQ</span>
+        </div>
+        <div class="mt-8  flex flex-col">
+            <span class="font-extrabold">Company</span>
+            <span class="mt-4">About</span>
+            <span class="mt-2">Customers</span>
+            <span class="mt-2">Blog</span>
+        </div>
+        <div class="mt-8  flex flex-col">
+            <span class="font-extrabold">Opportunities</span>
+            <span class="mt-4">Jobs</span>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

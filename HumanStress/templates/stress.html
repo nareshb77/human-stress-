@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css" integrity="sha512-RntatPOhEcQEA81gC/esYoCkGkL7AYV7TeTPoU+R9zE44/yWxVvLIBfBSaMu78rhoDd73ZeRHXRJN5+aPEK53Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Stress Predictor</title>
+</head>
+<body>
+    <nav class="bg-black flex justify-between py-4">
+        <div class="flex">
+            <img class="h-16" src="{% static 'img/LogoPredict.png' %}" alt="" srcset="">  
+            <h1 class="text-white mt-4 text-3xl font-bold">Human Stress Predictor</h1>
+        </div>
+        <div class=" mr-4 mt-6">
+            <a class="bg-black text-white font-bold text-lg hover:bg-gray-700 p-2 mt-8 rounded " href="login">Logout</a>
+        </div>
+    </nav>
+    <section class="mx-auto my-8">
+        <h1 class="text-3xl text-center">Predict Your Human Stress Predictor</h1>
+    </section>
+    <section class="">
+        <div class="w-full max-w-2xl mx-auto">
+            <form class=" shadow-md rounded px-8  pb-8 mb-4" action="predict" method="POST">
+                {% csrf_token %}
+                
+                    <div class="flex flex-col pt-4">
+                        <label for="sr" class="text-lg" name="sr">Snoring Rate</label>
+                        <input type="text" id="internship" placeholder="Snoring Rate" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" name="sr">
+                    </div>
+
+                    
+                    <div class="flex flex-col pt-4 ">
+                        <label for="rr" class="text-lg" name="rr">Respiration rate</label>
+                        <input type="text" id="gender" placeholder="Respiration rate" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" name="rr">
+                    </div>
+              
+
+                
+                <div class="flex flex-col pt-4">
+                    <label for="t" class="text-lg" name="t">Body Temperature</label>
+                    <input type="text" id="age" placeholder="Body Temperature" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline " name="t">
+                </div>
+
+                <div class="flex flex-col pt-4">
+                    <label for="bo" class="text-lg" name="bo">Blood Oxygen</label>
+                    <input type="text" id="CGPA" placeholder="Blood Oxygen" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" name="bo">
+                </div>
+                 <div class="flex flex-col pt-4">
+                    <label for="rem" class="text-lg" name="rem">Eye movement</label>
+                    <input type="text" id="hostel" placeholder="Eye movement" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" name="rem">
+                </div>
+
+
+                    <div class="flex flex-col pt-4 ">
+                        <label for="lm" class="text-lg" name="lm">Limb Movement</label>
+                        <input type="text" id="backlogs" placeholder="Limb Movement" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" name="lm">
+                    </div>
+    
+                   
+
+                    <div class="flex flex-col pt-4 ">
+                        <label for="sr" class="text-lg" name="sr1">Sleeping hours</label>
+                        <input type="text" id="stream1" placeholder="Sleeping Hours" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" name="sr1">
+                    </div>
+                    <div class="flex flex-col pt-4">
+                        <label for="hr" class="text-lg" name="hr">Heart Rate</label>
+                        <input type="text" id="stream1" placeholder="Heart Rate" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" name="hr">
+                    </div>
+
+
+
+
+<br><br>
+                <div class="submit-button">
+                    <button type="submit" class="bg-black text-white font-bold text-lg hover:bg-gray-700 p-2 mt-8 rounded">Check Stress Level</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

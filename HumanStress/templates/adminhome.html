@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<!-- 
+        Awesome Template
+        http://www.templatemo.com/preview/templatemo_450_awesome
+        -->
+		<title>Home</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="{% static 'css/templatemo-style.css' %}">
+		<script src="{% static 'js/jquery.js' %}"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/jquery.singlePageNav.min.js' %}"></script>
+		<script src="{% static 'js/typed.js' %}"></script>
+		<script src="{% static 'js/wow.min.js' %}"></script>
+		<script src="{% static 'js/custom.js' %}"></script>
+	</head>
+	<body id="top">
+
+		<!-- start preloader -->
+		<div class="preloader">
+			<div class="sk-spinner sk-spinner-wave">
+     	 		<div class="sk-rect1"></div>
+       			<div class="sk-rect2"></div>
+       			<div class="sk-rect3"></div>
+      	 		<div class="sk-rect4"></div>
+      			<div class="sk-rect5"></div>
+     		</div>
+    	</div>
+    	<!-- end preloader -->
+
+        <!-- start header -->
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <p><i class="fa fa-phone"></i><span> Phone</span>+91 914898456</p>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <p><i class="fa fa-envelope-o"></i><span> Email</span><a href="#">techcitiforyou@gmail.com</a></p>
+                    </div>
+                    <div class="col-md-5 col-sm-4 col-xs-12">
+                        <ul class="social-icon">
+                            <li><a href="/"> Logout</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+
+  
+      <!-- contact -->
+     <div class="contact">
+         <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                     <div class="titlepage text_align_center">
+                        <h1 style="text-transform: capitalize;
+                        color:whitesmoke;
+                        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                        font-style: italic;
+                        font-weight: bold;
+                        letter-spacing: 2px;
+                        word-spacing: 3px;
+                        font-size: 35px;
+                        margin-top: 20px;">View Human Stress Prediction</h1>
+                     </div>
+                  </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                 
+                
+                  
+                  <table class="table">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Snoring Rate</th>
+                        <th scope="col">Respiration Rate</th>
+                        <th scope="col">Blood Oxygen</th>
+                        <th scope="col">Body Temperature</th>
+                        <th scope="col">Limb Movement</th>
+                        <th scope="col">Eye Movement</th>
+                        <th scope="col">Sleeping Hours</th>
+                        <th scope="col">Heart Rate</th>
+                        <th scope="col">Stress Level Prediction</th>
+                      </tr>
+                    </thead>
+                    
+                    <tbody>
+                      
+                        {% for i in stress %}
+                      <tr>
+                        <th scope="row">{{i.id}}</th>
+                        <td>{{i.snoring_rate}}</td>
+                        <td>{{i.respiration_rate}}</td>
+                        <td>{{i.blood_oxygen}}</td>
+                        <td>{{i.body_temperature}}</td>
+                        <td>{{i.limb_movement}}</td>
+                        <td>{{i.eye_movement}}</td>
+                        <td>{{i.sleeping_hours}}</td>
+                        <td>{{i.heart_rate}}</td>
+                        <td>{{i.stress_level}}</td>
+
+
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+               </div>
+                
+            </div>
+         </div>
+      </div>
+      <!-- end contact -->
+      
+      <!-- Javascript files-->
+      <script src="{% static 'js/jquery.min.js' %}"></script>
+      <script src="{% static 'js/popper.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+      <!-- sidebar -->
+      <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+      <script src="{% static 'js/custom.js' %}"></script>
+   </body>
+</html>
